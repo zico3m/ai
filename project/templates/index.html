@@ -1,25 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <title>لوحة التحليلات</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
-<body class="container mt-4">
-    <h1 class="mb-4">📊 لوحة تحليلات الموقع</h1>
-
-    <h3>أكثر 10 مستخدمين تفاعلًا</h3>
-    <img src="{{ chart_path }}" class="img-fluid mb-3">
-    {{ top_users|safe }}
-
-    <h3 class="mt-4">عدد المقالات والأخبار</h3>
-    <ul>
-        <li>المقالات: {{ content_counts["المقالات"] }}</li>
-        <li>الأخبار: {{ content_counts["الأخبار"] }}</li>
-    </ul>
-
-    <h3 class="mt-4">عدد التعليقات الجيدة والمسيئة</h3>
-    {{ abusive_table|safe }}
-</body>
-</html>
